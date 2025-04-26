@@ -1,0 +1,24 @@
+pip	install	notebook
+ import	torch
+ from	transformers	import	BertTokenizer,	BertModel
+ def	sentiment_analysis(text):
+				#	Your	code	for	sentiment	analysis
+				pass
+ def	paraphrase_detection(text1,	text2):
+				#	Your	code	for	paraphrase	detection
+				pass
+ def	semantic_similarity(text1,	text2):
+				#	Your	code	for	semantic	similarity
+				pass
+ import	threading
+ def	run_tasks():
+				thread1	=	threading.Thread(target=sentiment_analysis,	args=("Your	text	here",))
+				thread2	=	threading.Thread(target=paraphrase_detection,	args=("Text1",	"Text2"))
+				thread3	=	threading.Thread(target=semantic_similarity,	args=("Text1",	"Text2"))
+				thread1.start()
+				thread2.start()
+				thread3.start()
+				thread1.join()
+				thread2.join()
+				thread3.join()
+ run_tasks()
